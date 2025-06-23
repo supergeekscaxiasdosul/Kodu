@@ -52,11 +52,9 @@ body.dark a {
       border-radius: 5px;
     }
 
-    /* h1{
-      background-color: #ccc;
-      padding: 10px;
-      border-radius: 5px;
-    } */
+    h1{
+      text-align: center;
+    }
 
     pre {
       background: #eee;

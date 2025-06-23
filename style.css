@@ -28,7 +28,10 @@ body.dark a {
   color: #eee;
 }
 
-
+.btt{
+  display: flex;
+  justify-content: flex-end;
+}
 /* ---------------------------------------- */
 body {
   font-family: Arial, sans-serif;
@@ -83,12 +86,14 @@ a{
 }
 .image{
   max-width: 800px;
+  max-height: 800px;
   display: flex;
   justify-content: center;
   /* background: #ff2121; */
 }
 img{
-  max-width: 700px;
+  max-width: 500px;
+  max-height: 500px;
   border-radius: 5px;
 }
 h1{

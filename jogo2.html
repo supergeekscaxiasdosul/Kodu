@@ -11,47 +11,152 @@
   <div class="btt">
     <button class="avancar" onclick="toggleDarkMode()">👓</button>
   </div>
-  <h1 class="tit">📘 Documentação do Projeto - </h1>
+  
+  <h1>📘 Documentação do Projeto - Rocket League</h1>
+
   <div class="image">
-    <img src="./img/pong.PNG" alt="">
+    <img src="./img/campo.PNG" alt="">
   </div>
 
   <div class="bloco">
-    <h2>🏓</h2>
+    <h2>⚙ Criador de Player 1</h2>
     <pre>
+1 - Quando: [] Faz: [set score] [yellow] [1 point]
 
+2 - Quando: [score] [yellow] [= equals] [1 point] Faz: [create] [cycle 1] 
+
+3 - Quando: [score] [purple] [= equals] [1 point] Faz: [create] [cycle 1]
+
+    4 - Quando: [] Faz: [set score] [purple] [0 points]
     </pre>
-    <p class="explicacao">👉</p>
+    <p class="explicacao">👉 Cria o player quando os pontos amarelos forem = 1.</p>
+  </div>
+
+  <div class="bloco">
+    <h2>🧠 Programação Player 1</h2>
+    <pre>
+1 Quando: [keyboard] [WASD] Faz: [move] [quickly] [quickly] [quickly]
+
+2 Quando: [keyboard] [V] Faz: [jump] [low]
+
+3 Quando: [] Faz: [move speed] "1"
+
+4 Quando: [on land] [type] "bloco laranja" Faz: [set score] [black] [1 point]
+
+5 Quando: [score] [black] [equals =] [1 point]
+
+    6 Quando: [keyboard] [Space] Faz: [move speed] "3"
+
+        7 - Quando: [timer] [2 seconds] Faz: [set score] [black] [0 points]
+
+8 - Quando: [bump] [cycle] Faz: [damage] [10 points] [it]
+
+9 - Quando: [bump] [cycle] Faz: [damage] [5 points] [me]
+
+10 - Quando: [health] [&lt;=] [0 points] Faz: [set score] [yellow] [1 points]
+
+11 - Quando: [score] [purple] [= equals] [1 point] Faz: [boom]
+    </pre>
+    <p class="explicacao">👉 Essa programação é responsável pela movimentação, pulo e turbo do player 1.</p>
+    <p class="explicacao">👉 Temos uma mecânica de colisões onde quem bate recebe menos dano.</p>
+    <p class="explicacao">👉 Os pontos amarelos controlam se o personagem deve ser criado ou não.</p>
 
   </div>
 
   <div class="bloco">
-    <h2>🧱</h2>
+    <h2>⚙ Criador de Player 2</h2>
     <pre>
+1 - Quando: [] Faz: [set score] [orange] [1 point]
 
+2 - Quando: [score] [orange] [= equals] [1 point] Faz: [create] [cycle 2] 
+
+3 - Quando: [score] [brown] [= equals] [1 point] Faz: [create] [cycle 2]  
+
+    4 - Quando: [] Faz: [set score] [brown] [0 points]
     </pre>
-    <p class="explicacao">👉</p>
+    <p class="explicacao">👉 Cria o player quando os pontos laranjas forem = 1.</p>
   </div>
 
   <div class="bloco">
-    <h2>🏓</h2>
+    <h2>🧠 Programação Player 2</h2>
     <pre>
+1 Quando: [keyboard] [arrows] Faz: [move] [quickly] [quickly] [quickly]
 
+2 Quando: [keyboard] [M] Faz: [jump] [low]
+
+3 Quando: [] Faz: [move speed] "1"
+
+4 Quando: [on land] [type] "bloco laranja" Faz: [set score] [grey] [1 point]
+
+5 Quando: [score] [grey] [equals =] [1 point]
+
+    6 Quando: [keyboard] [L] Faz: [move speed] "3"
+
+        7 Quando: [timer] [2 seconds] Faz: [set score] [grey] [0 points]
+
+8 - Quando: [bump] [cycle] Faz: [damage] [10 points] [it]
+
+9 - Quando: [bump] [cycle] Faz: [damage] [5 points] [me]
+
+10 - Quando: [health] [&lt;=] [0 points] Faz: [set score] [orange] [1 point]
+
+11 - Quando: [score] [brown] [= equals] [1 point] Faz: [boom]
     </pre>
-    <p class="explicacao">👉</p>
-    
+    <p class="explicacao">👉 Essa programação é responsável pela movimentação, pulo e turbo do player 2.</p>
+    <p class="explicacao">👉 Temos uma mecânica de colisões onde quem bate recebe menos dano.</p>
+    <p class="explicacao">👉 Os pontos laranjas controlam se o personagem deve ser criado ou não.</p>
   </div>
 
   <div class="bloco">
-    <h2>⚽</h2>
-    <p class="explicacao">👉</p>
+    <h2>🤖 Criador de bola</h2>
     <pre>
+1 Quando: [see] [not] [ball] Faz: [create] [ball 1]
 
+2 Quando: [] Faz: [set score] [white] [100 points] [once]
+
+3 Quando: [timer] [1 second] Faz: [subtract] [white] [1 point]
+
+4 Quando: [score] [white] [equals =] [0 points] Faz: [] 
+
+    5 Quando: [score] [blue] [above] [red] Faz: [win] [blue]
+
+    6 Quando: [score] [red] [above] [blue] Faz: [win] [red]
+
+    7 Quando: [timer] [0.123 seconds] Faz: []
+
+        8 Quando: [score] [red] [equals =] [blue] Faz: [say] "Empatou!"
+
+9 Quando: [] Faz: [play] [myst B]
     </pre>
-    <p class="explicacao">👉</p>
-
+    <p class="explicacao">👉 A lógica aqui é termos um personagem criando a bola.</p>
+    <p class="explicacao">👉 Sempre que ele não vê a bola, isso significa que aconteceu um gol e a bola deve ser criada.</p>
+    <p class="explicacao">👉 Temos um timer de 100 segundos para acabar o jogo.</p>
+    <p class="explicacao">👉 Verificamos quem está com a pontuação maior ou se houve empate.</p>    
   </div>
 
+  <div class="bloco">
+    <h2>⚽ Programação da Bola</h2>
+    <pre>
+1 - Quando: [on land] [type] Faz: [+ score] [red] [1 point] [once]
+
+    2 - Quando: [] Faz: [set score] [purple] [1 point]
+
+    3 - Quando: [] Faz: [play] [health] [once]
+
+    4 - Quando: [] Faz: [vanish]
+
+5 - Quando: [on land] [type] Faz: [+ score] [blue] [1 point] [once]
+
+    6 - Quando: [] Faz: [set score] [brown] [1 point]
+
+    7 - Quando: [] Faz: [play] [health] [once]
+
+    8 - Quando: [] Faz: [vanish]
+    </pre>
+    <p class="explicacao">👉 Lembrando que no [type] temos que colocar os blocos que escolhemos para ser as goleiras.</p>
+    <p class="explicacao">👉 Verifica de quem foi o gol, toca um som e esconde a bola.</p>
+
+  </div>
   <div class="bt">
     <button class="voltar">
       <a href="./index.html">Voltar</a>
