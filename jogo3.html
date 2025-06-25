@@ -11,45 +11,101 @@
   <div class="btt">
     <button class="avancar" onclick="toggleDarkMode()">👓</button>
   </div>
-  <h1 class="tit">📘 Documentação do Projeto - </h1>
+  <h1 class="tit">📘 Documentação do Projeto - Kodu do Google</h1>
   <div class="image">
-    <img src="./img/pong.PNG" alt="">
+    <img src="./img/mapa3.PNG" alt="">
+  </div>
+<!-- Diminuir o curto alcance da torre de pontos para 2 -->
+  <div class="bloco">
+    <h2>🤖 Jogador</h2>
+    <pre>
+1 - Quando: [keyboard] [space] Faz: [jump] [low]
+
+2 - Quando: [scored] [red] [>=] [50 points] Faz: [win]
+
+3 - Quando: [health] [<=] [points] Faz: [end]
+    </pre>
+    <p class="explicacao">👉Para este exemplo o personagem tem um tamnho de 0,4.</p>
+    <p class="explicacao">👉Devemos habilitar a opção mostrar pontos marcados, para vermos a barra de vida.</p>
+    <p class="explicacao">👉O personagem pula, ganha ou perde o jogo.</p>
+
   </div>
 
   <div class="bloco">
-    <h2>🏓</h2>
+    <h2>👾 Inimigo terrestre</h2>
     <pre>
+1 - Quando: [always] Faz: [move] [west]
 
+2 - Quando: [on land] [type] "blobo final" Faz: [vanish] [me]
+
+3 - Quando: [bump] [Cycle] Faz: [damage] [10 points] [it]
+
+    4 - Quando: [] Faz: [boom]
     </pre>
-    <p class="explicacao">👉</p>
-
+    <p class="explicacao">👉Para este exemplo o personagem tem um tamnho de 0,4.</p>
+    <p class="explicacao">👉Este personagem deve ter a opção de criável ativada.</p>
+    <p class="explicacao">👉Se move para oeste, quando encosta do bloco no fim do caminho desaparece.</p>
+    <p class="explicacao">👉Tira 10 pontos da vida do jogador.</p>
   </div>
 
   <div class="bloco">
-    <h2>🧱</h2>
+    <h2>⚙ Criador de inimigo terrestre</h2>
     <pre>
-
+1 - Quando: [timer] [2 seconds] Faz: [create] [Cycle 1]
     </pre>
-    <p class="explicacao">👉</p>
+    <p class="explicacao">👉Para este exemplo o personagem tem um tamanho de 0,4.</p>
+    <p class="explicacao">👉Criamos o personagem a cada 2 segundos.</p>
   </div>
 
   <div class="bloco">
-    <h2>🏓</h2>
+    <h2>👾 Inimigo Voador</h2>
     <pre>
+1 - Quando: [always] Faz: [move] [west]
 
+2 - Quando: [on land] [type] "blobo final" Faz: [vanish] [me]
+
+3 - Quando: [bump] [Cycle] Faz: [damage] [5 points] [it]
+
+    4 - Quando: [] Faz: [boom]
     </pre>
-    <p class="explicacao">👉</p>
-    
+    <p class="explicacao">👉Para este exemplo o personagem tem um tamanho de 0,4.</p>
+    <p class="explicacao">👉Para este exemplo o personagem tem altura de 1,90.</p>
+    <p class="explicacao">👉Este personagem deve ter a opção de criável ativada.</p>
+    <p class="explicacao">👉Se move para oeste, quando encosta do bloco no fim do caminho desaparece.</p>
+    <p class="explicacao">👉Tira 5 pontos da vida do jogador.</p> 
   </div>
 
   <div class="bloco">
-    <h2>⚽</h2>
-    <p class="explicacao">👉</p>
+    <h2>⚙ Criador de inimigo voador</h2>
     <pre>
-
+1 - Quando: [timer] [3 seconds] Faz: [create] [Jet 1]
     </pre>
-    <p class="explicacao">👉</p>
+    <p class="explicacao">👉Para este exemplo o personagem tem altura de 1,90.</p>
+    <p class="explicacao">👉Para este exemplo o personagem tem um tamanho de 0,4.</p>
+    <p class="explicacao">👉Criamos o personagem a cada 3 segundos.</p>
+  </div>
 
+  <div class="bloco">
+    <h2>⚙ Stick de pontos</h2>
+    <pre>
+1 - Quando: [see] [cycle] [close by] [white] Faz: [+ score] [red] [1 point] [once]
+    </pre>
+    <p class="explicacao">👉Nas definições desse personagem devemos definir o curto alcance para 2,0.</p>
+    <p class="explicacao">👉Curto alcance é o que define a distância do close by "ver perto".</p>
+    <p class="explicacao">👉Para este exemplo o personagem tem um tamanho de 0,4.</p>
+    <p class="explicacao">👉Criamos o personagem a cada 3 segundos.</p>
+  </div>
+
+  <div class="bloco">
+    <h2>⚙ Jet de pontos</h2>
+    <pre>
+1 - Quando: [see] [jet] [close by] [white] Faz: [+ score] [red] [1 point] [once]
+    </pre>
+    <p class="explicacao">👉Para este exemplo o personagem tem altura de 1,90.</p>
+    <p class="explicacao">👉Nas definições desse personagem devemos definir o curto alcance para 2,0.</p>
+    <p class="explicacao">👉Curto alcance é o que define a distância do close by "ver perto".</p>
+    <p class="explicacao">👉Para este exemplo o personagem tem um tamanho de 0,4.</p>
+    <p class="explicacao">👉Criamos o personagem a cada 3 segundos.</p>
   </div>
 
   <div class="bt">
